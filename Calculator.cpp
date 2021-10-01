@@ -3,13 +3,15 @@
 
 using namespace std;
 
-int logarithm();
-int power();
+float logarithm();
+float power();
 
 int main()
 {   
-    int a;
-    cout<<"Calculator-";
+    int a,b=1;
+   
+  do{
+    cout<<"Hello I am a Calculator-";
     cout<<"\n1. Logarithm";
     cout<<"\n2. Power";
     cout<<"\nEnter option-";
@@ -19,12 +21,12 @@ int main()
     {
         case 1:
         {	
-	logarithm();
+	cout<<logarithm();
 	break;
         }    
         case 2:
        {
-	power();
+	cout<<power();
 	break;
         }        
         default:
@@ -33,23 +35,29 @@ int main()
 	break;
         }
     }
-    return 0;
+  cout<<"\n\nWant to continue?(1/0)";
+  cin>>b;
+  cout<<"\n";
+  }while(b==1);
+   return 0;
 }
 
-int logarithm()
+float logarithm()
 {
     int a,b;
     float c;
     cout<<"\nEnter base and argument-";
     cin>>a>>b;
     c=(log(b))/(log(a));
-    cout<<c;
+    return c;
 }
 
-int power()
+float power()
 {
-    float x,y;
-    cout<<"Enter 2 nos";
+    int x,y;
+    float z;
+    cout<<"Enter base and power-";
     cin>>x>>y;
-    cout<<pow(x,y);
+    z=pow(x,y);
+    return z;
 }
