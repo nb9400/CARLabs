@@ -8,7 +8,9 @@ int power();
 
 int main()
 {   
-    int a;
+    int a,b=1;
+
+  do{
     cout<<"Calculator-";
     cout<<"\n1. Logarithm";
     cout<<"\n2. Power";
@@ -33,6 +35,10 @@ int main()
 	break;
         }
     }
+  cout<<"\nContinue?";
+  cin>>b;
+  cout<<endl;
+ }while(b==1);
     return 0;
 }
 
@@ -49,7 +55,7 @@ int logarithm()
 int power()
 {
     float x,y;
-    cout<<"Enter 2 nos";
+    cout<<"Enter base and power-";
     cin>>x>>y;
     cout<<pow(x,y);
 }
